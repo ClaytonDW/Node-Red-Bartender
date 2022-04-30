@@ -1,0 +1,4646 @@
+[
+    {
+        "id": "24686110a19dc9cb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4dcbaf31717da19c",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Margarita",
+        "info": "",
+        "x": 60,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d723a8a4f578a8c9",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 700,
+        "wires": [
+            [
+                "1b04b51c34650dfc",
+                "3b672c8bfc123306",
+                "0c4226c3127dc22c",
+                "b26d866327c4953d"
+            ]
+        ]
+    },
+    {
+        "id": "7544cf335db53efc",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Margarita",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 740,
+        "wires": [
+            [
+                "1b04b51c34650dfc",
+                "3b672c8bfc123306",
+                "0c4226c3127dc22c",
+                "b26d866327c4953d"
+            ]
+        ]
+    },
+    {
+        "id": "b26d866327c4953d",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 820,
+        "wires": [
+            [
+                "2a38581f4886aa82",
+                "92f708ce10bd7663"
+            ]
+        ]
+    },
+    {
+        "id": "0c4226c3127dc22c",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Margarita is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 860,
+        "wires": [
+            [
+                "b1e441bb7561abfd",
+                "1742560eeff493aa"
+            ]
+        ]
+    },
+    {
+        "id": "1b04b51c34650dfc",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Tequila",
+        "pin": "Pump Tequila",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3b672c8bfc123306",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Marg Mix",
+        "pin": "Pump Marg Mix",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "2a38581f4886aa82",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 780,
+        "wires": [
+            [
+                "1b04b51c34650dfc"
+            ]
+        ]
+    },
+    {
+        "id": "92f708ce10bd7663",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "3b672c8bfc123306",
+                "1c9fdf24a129c284"
+            ]
+        ]
+    },
+    {
+        "id": "b1e441bb7561abfd",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Margarita is being Prepared",
+        "x": 400,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "1742560eeff493aa",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Margarita is being prepared",
+        "voice": "33",
+        "x": 400,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "1c9fdf24a129c284",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 880,
+        "wires": [
+            [
+                "a459cf5a7c027ea0",
+                "7cfdb67cc5c96123"
+            ]
+        ]
+    },
+    {
+        "id": "a459cf5a7c027ea0",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Margarita is ready",
+        "voice": "33",
+        "x": 710,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "7cfdb67cc5c96123",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Margarita is ready",
+        "x": 770,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "54f3ca46b1feb236",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Margarita",
+        "devicetype": "Extended color light",
+        "x": 60,
+        "y": 780,
+        "wires": [
+            [
+                "7544cf335db53efc"
+            ]
+        ]
+    },
+    {
+        "id": "f5c2dd94cd4afc44",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Moscow Mule",
+        "info": "",
+        "x": 70,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4a1b9fcff36e3486",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 980,
+        "wires": [
+            [
+                "b0f144a70a24cedf",
+                "0ed6a7099aaae242",
+                "b2364c3dca439866",
+                "3f5e1e0ff2f16cf2"
+            ]
+        ]
+    },
+    {
+        "id": "0cb50a0f122168a9",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Moscow Mule",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 1020,
+        "wires": [
+            [
+                "b0f144a70a24cedf",
+                "0ed6a7099aaae242",
+                "b2364c3dca439866",
+                "3f5e1e0ff2f16cf2"
+            ]
+        ]
+    },
+    {
+        "id": "3f5e1e0ff2f16cf2",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1100,
+        "wires": [
+            [
+                "f888ec604241a169",
+                "5d070621656e8101"
+            ]
+        ]
+    },
+    {
+        "id": "b2364c3dca439866",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Moscow Mule is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1140,
+        "wires": [
+            [
+                "295f2cd4c3f064b1",
+                "1bb878fe6874d9ec"
+            ]
+        ]
+    },
+    {
+        "id": "b0f144a70a24cedf",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 730,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "0ed6a7099aaae242",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Ginger Ale",
+        "pin": "Pump Ginger Ale",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 750,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "f888ec604241a169",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1060,
+        "wires": [
+            [
+                "b0f144a70a24cedf"
+            ]
+        ]
+    },
+    {
+        "id": "5d070621656e8101",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1120,
+        "wires": [
+            [
+                "0ed6a7099aaae242",
+                "8b68d333d7b00305"
+            ]
+        ]
+    },
+    {
+        "id": "295f2cd4c3f064b1",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Moscow Mule is being Prepared",
+        "x": 410,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "1bb878fe6874d9ec",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Moscow Mule is being prepared",
+        "voice": "33",
+        "x": 410,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "8b68d333d7b00305",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1160,
+        "wires": [
+            [
+                "04885ee30b2dbcce",
+                "e0c0a0d79c591fe8"
+            ]
+        ]
+    },
+    {
+        "id": "04885ee30b2dbcce",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Moscow Mule is ready",
+        "voice": "33",
+        "x": 720,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "e0c0a0d79c591fe8",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Moscow Mule is ready",
+        "x": 780,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4b64f6caf1369ee4",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Moscow Mule",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 1060,
+        "wires": [
+            [
+                "0cb50a0f122168a9"
+            ]
+        ]
+    },
+    {
+        "id": "30e09f6dbe88ebed",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Ginger",
+        "info": "",
+        "x": 80,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "9595e4fd4eb50ec4",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1260,
+        "wires": [
+            [
+                "b3ac5fc6afd8b123",
+                "4cff16e67647716b",
+                "25da014478653726",
+                "4adea0aef8a7653d"
+            ]
+        ]
+    },
+    {
+        "id": "d0a65c4b59909167",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Whiskey Ginger",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 1300,
+        "wires": [
+            [
+                "b3ac5fc6afd8b123",
+                "4cff16e67647716b",
+                "25da014478653726",
+                "4adea0aef8a7653d"
+            ]
+        ]
+    },
+    {
+        "id": "4adea0aef8a7653d",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1380,
+        "wires": [
+            [
+                "32b1828e07ea9a44",
+                "fdc45cd98e144452"
+            ]
+        ]
+    },
+    {
+        "id": "25da014478653726",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Whiskey Ginger is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1420,
+        "wires": [
+            [
+                "edc12fe984488ed8",
+                "72a275a9def49080"
+            ]
+        ]
+    },
+    {
+        "id": "b3ac5fc6afd8b123",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Bourbon",
+        "pin": "Pump Bourbon",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "4cff16e67647716b",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Ginger Ale",
+        "pin": "Pump Ginger Ale",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 750,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "32b1828e07ea9a44",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1340,
+        "wires": [
+            [
+                "b3ac5fc6afd8b123"
+            ]
+        ]
+    },
+    {
+        "id": "fdc45cd98e144452",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1400,
+        "wires": [
+            [
+                "4cff16e67647716b",
+                "16cf397f9b5a7f78"
+            ]
+        ]
+    },
+    {
+        "id": "edc12fe984488ed8",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Whiskey Ginger is being Prepared",
+        "x": 420,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "72a275a9def49080",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Ginger is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "16cf397f9b5a7f78",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1440,
+        "wires": [
+            [
+                "dacbda8161af9620",
+                "15c59ace9d909124"
+            ]
+        ]
+    },
+    {
+        "id": "dacbda8161af9620",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Ginger is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "15c59ace9d909124",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Whiskey Ginger is ready",
+        "x": 790,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "a05528e48b0c3f1d",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Whiskey Ginger",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 1340,
+        "wires": [
+            [
+                "d0a65c4b59909167"
+            ]
+        ]
+    },
+    {
+        "id": "3217d7acaba5b640",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Orange Margarita",
+        "info": "",
+        "x": 80,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "ecd7e7c38c9c8df6",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1540,
+        "wires": [
+            [
+                "a0c19932e42df4f4",
+                "65e6b4718e4498f7",
+                "52c654fb8f6e1ed1",
+                "de7cbd1c209ae76f",
+                "45de3317b72ec07d"
+            ]
+        ]
+    },
+    {
+        "id": "f29bbe9ed7497e66",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Orange Margarita",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 1580,
+        "wires": [
+            [
+                "a0c19932e42df4f4",
+                "65e6b4718e4498f7",
+                "52c654fb8f6e1ed1",
+                "de7cbd1c209ae76f",
+                "45de3317b72ec07d"
+            ]
+        ]
+    },
+    {
+        "id": "de7cbd1c209ae76f",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1660,
+        "wires": [
+            [
+                "46cf7bb06b03d1a7",
+                "149ace426bb1dd0a",
+                "e5566e7b6c68e56b"
+            ]
+        ]
+    },
+    {
+        "id": "52c654fb8f6e1ed1",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Orange Margarita is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1700,
+        "wires": [
+            [
+                "4e92b8c0b7ce2454",
+                "b1aa08a46c44918b"
+            ]
+        ]
+    },
+    {
+        "id": "a0c19932e42df4f4",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Tequila",
+        "pin": "Pump Tequila",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "65e6b4718e4498f7",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Marg Mix",
+        "pin": "Pump Marg Mix",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "46cf7bb06b03d1a7",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1640,
+        "wires": [
+            [
+                "a0c19932e42df4f4"
+            ]
+        ]
+    },
+    {
+        "id": "149ace426bb1dd0a",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1680,
+        "wires": [
+            [
+                "65e6b4718e4498f7",
+                "1a4708cdbc966432"
+            ]
+        ]
+    },
+    {
+        "id": "4e92b8c0b7ce2454",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Orange Margarita is being Prepared",
+        "x": 420,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b1aa08a46c44918b",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Orange Margarita is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "1a4708cdbc966432",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1720,
+        "wires": [
+            [
+                "9b60ca8abbed333a",
+                "3b59087fa5d5f2d2"
+            ]
+        ]
+    },
+    {
+        "id": "9b60ca8abbed333a",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Orange Margarita is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "3b59087fa5d5f2d2",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Orange Margarita is ready",
+        "x": 790,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "39f68b2164101cf6",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Orange Margarita",
+        "devicetype": "Extended color light",
+        "x": 90,
+        "y": 1620,
+        "wires": [
+            [
+                "f29bbe9ed7497e66"
+            ]
+        ]
+    },
+    {
+        "id": "1a85610ab729f895",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Screw Driver",
+        "info": "",
+        "x": 70,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "2140c21f93db4d51",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 1820,
+        "wires": [
+            [
+                "7c388cbd55d190e2",
+                "cb418201043c4198",
+                "82f9aa1d900e9876",
+                "bd6c6f9391d63b17"
+            ]
+        ]
+    },
+    {
+        "id": "a7c48023e6e282fc",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Screw Driver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 1860,
+        "wires": [
+            [
+                "7c388cbd55d190e2",
+                "cb418201043c4198",
+                "82f9aa1d900e9876",
+                "bd6c6f9391d63b17"
+            ]
+        ]
+    },
+    {
+        "id": "bd6c6f9391d63b17",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1940,
+        "wires": [
+            [
+                "3b7c9aa06b34eef3",
+                "12f58d86fa359d5a"
+            ]
+        ]
+    },
+    {
+        "id": "82f9aa1d900e9876",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Screw Driver is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1980,
+        "wires": [
+            [
+                "ad5dec79fa77b0ca",
+                "a072a9b59cd3ba07"
+            ]
+        ]
+    },
+    {
+        "id": "7c388cbd55d190e2",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 730,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "cb418201043c4198",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pin": "Pump_6_Margarita",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 770,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "3b7c9aa06b34eef3",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1900,
+        "wires": [
+            [
+                "7c388cbd55d190e2"
+            ]
+        ]
+    },
+    {
+        "id": "12f58d86fa359d5a",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1960,
+        "wires": [
+            [
+                "cb418201043c4198",
+                "fb75269111913fc7"
+            ]
+        ]
+    },
+    {
+        "id": "ad5dec79fa77b0ca",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Screw Driver is being Prepared",
+        "x": 410,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "a072a9b59cd3ba07",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Screw Driver is being prepared",
+        "voice": "33",
+        "x": 410,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "fb75269111913fc7",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 2000,
+        "wires": [
+            [
+                "2464bbb118b10ad4",
+                "10a975c6986d2dbc"
+            ]
+        ]
+    },
+    {
+        "id": "2464bbb118b10ad4",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Screw Driver is ready",
+        "voice": "33",
+        "x": 720,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "10a975c6986d2dbc",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Screw Driver is ready",
+        "x": 780,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "e349eb360a9a7e61",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Screw Driver",
+        "devicetype": "Extended color light",
+        "x": 70,
+        "y": 1900,
+        "wires": [
+            [
+                "a7c48023e6e282fc"
+            ]
+        ]
+    },
+    {
+        "id": "b44287952b07625d",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Kentucky Mule",
+        "info": "",
+        "x": 80,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "acf50a92b779b459",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 2100,
+        "wires": [
+            [
+                "8d115b168dce44a2",
+                "28998453e07bb55e",
+                "e2d647c29db6cddb",
+                "80549e1d3974f8a7"
+            ]
+        ]
+    },
+    {
+        "id": "c52519c62a601a47",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Kentucky Mule",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 2140,
+        "wires": [
+            [
+                "8d115b168dce44a2",
+                "28998453e07bb55e",
+                "e2d647c29db6cddb",
+                "80549e1d3974f8a7"
+            ]
+        ]
+    },
+    {
+        "id": "80549e1d3974f8a7",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 2220,
+        "wires": [
+            [
+                "e24b25a3335a796e",
+                "cb0815fa7ef36500"
+            ]
+        ]
+    },
+    {
+        "id": "e2d647c29db6cddb",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Kentucky Mule is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 2260,
+        "wires": [
+            [
+                "7b2d3663e9fd18dd",
+                "f49746f8de4baffe"
+            ]
+        ]
+    },
+    {
+        "id": "8d115b168dce44a2",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Bourbon",
+        "pin": "Pump Bourbon",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "28998453e07bb55e",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Ginger Ale",
+        "pin": "Pump Ginger Ale",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 750,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "e24b25a3335a796e",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2180,
+        "wires": [
+            [
+                "8d115b168dce44a2"
+            ]
+        ]
+    },
+    {
+        "id": "cb0815fa7ef36500",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2240,
+        "wires": [
+            [
+                "28998453e07bb55e",
+                "b4a3aa3f56d21f6f"
+            ]
+        ]
+    },
+    {
+        "id": "7b2d3663e9fd18dd",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Kentucky Mule is being Prepared",
+        "x": 420,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "f49746f8de4baffe",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Kentucky Mule is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "b4a3aa3f56d21f6f",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 2280,
+        "wires": [
+            [
+                "5fd00c4e6715762c",
+                "f062d66bc2eab35a"
+            ]
+        ]
+    },
+    {
+        "id": "5fd00c4e6715762c",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Kentucky Mule is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "f062d66bc2eab35a",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Kentucky Mule is ready",
+        "x": 790,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "c0d69a7969b4e8fa",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Kentucky Mule",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 2180,
+        "wires": [
+            [
+                "c52519c62a601a47"
+            ]
+        ]
+    },
+    {
+        "id": "7b1d9c3fee03221e",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Highball",
+        "info": "",
+        "x": 80,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "bb9c2232a84c9079",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 2380,
+        "wires": [
+            [
+                "fc4a78a4e61ac94a",
+                "5765773b2d00c573",
+                "f3d835f131a24c1b",
+                "d838cc96c425b175"
+            ]
+        ]
+    },
+    {
+        "id": "640c74ea38e00287",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Whiskey Highball",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 250,
+        "y": 2420,
+        "wires": [
+            [
+                "fc4a78a4e61ac94a",
+                "5765773b2d00c573",
+                "f3d835f131a24c1b",
+                "d838cc96c425b175"
+            ]
+        ]
+    },
+    {
+        "id": "d838cc96c425b175",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 2500,
+        "wires": [
+            [
+                "fe47d75afdf78f23",
+                "de22c2fdf6ace004"
+            ]
+        ]
+    },
+    {
+        "id": "f3d835f131a24c1b",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Whiskey Highball is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 2540,
+        "wires": [
+            [
+                "5290b60d59951604",
+                "025d4f40533979f2"
+            ]
+        ]
+    },
+    {
+        "id": "fc4a78a4e61ac94a",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Bourbon",
+        "pin": "Pump Bourbon",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "5765773b2d00c573",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Ginger Ale",
+        "pin": "Pump Ginger Ale",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 750,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "fe47d75afdf78f23",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2460,
+        "wires": [
+            [
+                "fc4a78a4e61ac94a"
+            ]
+        ]
+    },
+    {
+        "id": "de22c2fdf6ace004",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2520,
+        "wires": [
+            [
+                "5765773b2d00c573",
+                "c78aa6de6666ef41"
+            ]
+        ]
+    },
+    {
+        "id": "5290b60d59951604",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Whiskey Highball is being Prepared",
+        "x": 420,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "025d4f40533979f2",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Highball is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "c78aa6de6666ef41",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 2560,
+        "wires": [
+            [
+                "36a7a3a35844b678",
+                "3d59bdbd1aee6706"
+            ]
+        ]
+    },
+    {
+        "id": "36a7a3a35844b678",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Whiskey Highball is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "3d59bdbd1aee6706",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Whiskey Highball is ready",
+        "x": 790,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "af1a3ed81470151a",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Whiskey Highball",
+        "devicetype": "Extended color light",
+        "x": 90,
+        "y": 2460,
+        "wires": [
+            [
+                "640c74ea38e00287"
+            ]
+        ]
+    },
+    {
+        "id": "4573409a863f8f9b",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Bronx",
+        "info": "",
+        "x": 50,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "2e10a72697c09fbd",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 2660,
+        "wires": [
+            [
+                "6634df677d0abfe9",
+                "c307d19b08b86493",
+                "019e5e43aadc737a",
+                "2dd36c239f59c14f",
+                "8b3fdbfa677bf293"
+            ]
+        ]
+    },
+    {
+        "id": "9d3daf3b56077615",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Bronx",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 2700,
+        "wires": [
+            [
+                "6634df677d0abfe9",
+                "c307d19b08b86493",
+                "019e5e43aadc737a",
+                "2dd36c239f59c14f",
+                "8b3fdbfa677bf293"
+            ]
+        ]
+    },
+    {
+        "id": "2dd36c239f59c14f",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 2780,
+        "wires": [
+            [
+                "7e662373f0528d11",
+                "120ba2ed3c1da68f",
+                "e0f3be370a4d5cc8"
+            ]
+        ]
+    },
+    {
+        "id": "019e5e43aadc737a",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Bronx is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 2820,
+        "wires": [
+            [
+                "be31a3ba29cce062",
+                "a4301c391a734ce0"
+            ]
+        ]
+    },
+    {
+        "id": "6634df677d0abfe9",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vermouth",
+        "pin": "Pump Vermouth",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "c307d19b08b86493",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "7e662373f0528d11",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2760,
+        "wires": [
+            [
+                "6634df677d0abfe9"
+            ]
+        ]
+    },
+    {
+        "id": "120ba2ed3c1da68f",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2800,
+        "wires": [
+            [
+                "c307d19b08b86493",
+                "2a4d16f3ff4f9bf2"
+            ]
+        ]
+    },
+    {
+        "id": "be31a3ba29cce062",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Bronx is being Prepared",
+        "x": 390,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "a4301c391a734ce0",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Bronx is being prepared",
+        "voice": "33",
+        "x": 390,
+        "y": 2880,
+        "wires": []
+    },
+    {
+        "id": "2a4d16f3ff4f9bf2",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 2840,
+        "wires": [
+            [
+                "03767fa79ab9a246",
+                "20dd3802ba78611c"
+            ]
+        ]
+    },
+    {
+        "id": "03767fa79ab9a246",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Bronx is ready",
+        "voice": "33",
+        "x": 700,
+        "y": 2880,
+        "wires": []
+    },
+    {
+        "id": "20dd3802ba78611c",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Bronx is ready",
+        "x": 760,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "cebed0b91ffc69ea",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Bronx",
+        "devicetype": "Extended color light",
+        "x": 50,
+        "y": 2740,
+        "wires": [
+            [
+                "9d3daf3b56077615"
+            ]
+        ]
+    },
+    {
+        "id": "ea1ccaafc8e647a0",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Kamikaze",
+        "info": "",
+        "x": 60,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "d30b868afd247861",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 2940,
+        "wires": [
+            [
+                "be54b0165decfc0b",
+                "bd50c33bb322eb9b",
+                "36b7f5fd2ea97756",
+                "32b1f655b49b8096"
+            ]
+        ]
+    },
+    {
+        "id": "4f988e11abf7fa13",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Kamikaze",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 2980,
+        "wires": [
+            [
+                "be54b0165decfc0b",
+                "bd50c33bb322eb9b",
+                "36b7f5fd2ea97756",
+                "32b1f655b49b8096"
+            ]
+        ]
+    },
+    {
+        "id": "32b1f655b49b8096",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 3060,
+        "wires": [
+            [
+                "a39f3429f36b0f38",
+                "d7e7ae88a710b9f3"
+            ]
+        ]
+    },
+    {
+        "id": "36b7f5fd2ea97756",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Kamikaze is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 3100,
+        "wires": [
+            [
+                "52a47ff6a80eaf39",
+                "6ebe22601cb56d6e"
+            ]
+        ]
+    },
+    {
+        "id": "be54b0165decfc0b",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 730,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "bd50c33bb322eb9b",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Orange Juice",
+        "pin": "Pump Orange Juice",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 760,
+        "y": 3000,
+        "wires": []
+    },
+    {
+        "id": "a39f3429f36b0f38",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3020,
+        "wires": [
+            [
+                "be54b0165decfc0b"
+            ]
+        ]
+    },
+    {
+        "id": "d7e7ae88a710b9f3",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3080,
+        "wires": [
+            [
+                "bd50c33bb322eb9b",
+                "29fcdd8e610f32c1"
+            ]
+        ]
+    },
+    {
+        "id": "52a47ff6a80eaf39",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Kamikaze is being Prepared",
+        "x": 400,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "6ebe22601cb56d6e",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Kamikaze is being prepared",
+        "voice": "33",
+        "x": 400,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "29fcdd8e610f32c1",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 3120,
+        "wires": [
+            [
+                "cefb72f29f4804df",
+                "ccf4e0cb571ea4f2"
+            ]
+        ]
+    },
+    {
+        "id": "cefb72f29f4804df",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Kamikaze is ready",
+        "voice": "33",
+        "x": 710,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "ccf4e0cb571ea4f2",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Kamikaze is ready",
+        "x": 770,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "1459b25abdb2d309",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Kamikaze",
+        "devicetype": "Extended color light",
+        "x": 60,
+        "y": 3020,
+        "wires": [
+            [
+                "4f988e11abf7fa13"
+            ]
+        ]
+    },
+    {
+        "id": "b2abdeabe1bac238",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Mexican Mule",
+        "info": "",
+        "x": 70,
+        "y": 3220,
+        "wires": []
+    },
+    {
+        "id": "683fe63c99754e85",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 3220,
+        "wires": [
+            [
+                "970e4f5521a32dd3",
+                "bffc08c9b7da0ea8",
+                "a0e6406b28152797",
+                "86fa74080e2de462"
+            ]
+        ]
+    },
+    {
+        "id": "3ce574f01f4c6489",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Mexican Mule",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 3260,
+        "wires": [
+            [
+                "970e4f5521a32dd3",
+                "bffc08c9b7da0ea8",
+                "a0e6406b28152797",
+                "86fa74080e2de462"
+            ]
+        ]
+    },
+    {
+        "id": "86fa74080e2de462",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 3340,
+        "wires": [
+            [
+                "0c4d8dacfd394843",
+                "c34a3499018a84fe"
+            ]
+        ]
+    },
+    {
+        "id": "a0e6406b28152797",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Mexican Mule is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 3380,
+        "wires": [
+            [
+                "5fae508826368c33",
+                "575ef8cb85bb28ab"
+            ]
+        ]
+    },
+    {
+        "id": "970e4f5521a32dd3",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 3220,
+        "wires": []
+    },
+    {
+        "id": "bffc08c9b7da0ea8",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Tequila",
+        "pin": "Pump Tequila",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "0c4d8dacfd394843",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3300,
+        "wires": [
+            [
+                "970e4f5521a32dd3"
+            ]
+        ]
+    },
+    {
+        "id": "c34a3499018a84fe",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3360,
+        "wires": [
+            [
+                "bffc08c9b7da0ea8",
+                "44d9a0adf1c06e22"
+            ]
+        ]
+    },
+    {
+        "id": "5fae508826368c33",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Mexican Mule is being Prepared",
+        "x": 410,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "575ef8cb85bb28ab",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Mexican Mule is being prepared",
+        "voice": "33",
+        "x": 410,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "44d9a0adf1c06e22",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 3400,
+        "wires": [
+            [
+                "1c710cd0ee9857f5",
+                "32d912274793bf28"
+            ]
+        ]
+    },
+    {
+        "id": "1c710cd0ee9857f5",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Mexican Mule is ready",
+        "voice": "33",
+        "x": 720,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "32d912274793bf28",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Mexican Mule is ready",
+        "x": 780,
+        "y": 3340,
+        "wires": []
+    },
+    {
+        "id": "af323e3be1d2bf5a",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Mexican Mule",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 3300,
+        "wires": [
+            [
+                "3ce574f01f4c6489"
+            ]
+        ]
+    },
+    {
+        "id": "3a32f11aef26d1f1",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Martini",
+        "info": "",
+        "x": 50,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "41811963a3c08915",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "89344942977aa8d8",
+                "6c2a9caf897e7ad5",
+                "a32251cc59b26b1f",
+                "1fbf455decfb40c3",
+                "7d819ef546c374ee"
+            ]
+        ]
+    },
+    {
+        "id": "ae50372821998036",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Martini",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "89344942977aa8d8",
+                "a32251cc59b26b1f",
+                "1fbf455decfb40c3",
+                "7d819ef546c374ee",
+                "6c2a9caf897e7ad5"
+            ]
+        ]
+    },
+    {
+        "id": "1fbf455decfb40c3",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 260,
+        "wires": [
+            [
+                "b32c257e6dd95dc7",
+                "e0c5afda61b4f8d4",
+                "45bbb79d840cb221"
+            ]
+        ]
+    },
+    {
+        "id": "a32251cc59b26b1f",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Martini is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "03e73974e8a32022",
+                "efbded527ded959a"
+            ]
+        ]
+    },
+    {
+        "id": "89344942977aa8d8",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vermouth",
+        "pin": "Pump Vermouth",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6c2a9caf897e7ad5",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b32c257e6dd95dc7",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "89344942977aa8d8"
+            ]
+        ]
+    },
+    {
+        "id": "e0c5afda61b4f8d4",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "6c2a9caf897e7ad5",
+                "b657eee000ef876b"
+            ]
+        ]
+    },
+    {
+        "id": "03e73974e8a32022",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Martini is being Prepared",
+        "x": 390,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "efbded527ded959a",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Martini is being prepared",
+        "voice": "33",
+        "x": 390,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b657eee000ef876b",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 320,
+        "wires": [
+            [
+                "a0995afa503cece7",
+                "037cdd6114b438f0"
+            ]
+        ]
+    },
+    {
+        "id": "a0995afa503cece7",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Martini is ready",
+        "voice": "33",
+        "x": 700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "037cdd6114b438f0",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Martini is being Prepared",
+        "x": 790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cf1de16aa98f398e",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Martini",
+        "devicetype": "Extended color light",
+        "x": 50,
+        "y": 220,
+        "wires": [
+            [
+                "ae50372821998036"
+            ]
+        ]
+    },
+    {
+        "id": "30872b0136f2aa4d",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Manhattan",
+        "info": "",
+        "x": 60,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d245ba120fa2da46",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "de34acf21cdb797a",
+                "d607cf14620af07a",
+                "d7cbe74cdfac5370",
+                "b74e9e26fa67f807"
+            ]
+        ]
+    },
+    {
+        "id": "7e469e56073f07d4",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Manhattan",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 460,
+        "wires": [
+            [
+                "de34acf21cdb797a",
+                "d607cf14620af07a",
+                "d7cbe74cdfac5370",
+                "b74e9e26fa67f807"
+            ]
+        ]
+    },
+    {
+        "id": "b74e9e26fa67f807",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 540,
+        "wires": [
+            [
+                "ea9f0e27e0332e49",
+                "7d0b79daa8df896a"
+            ]
+        ]
+    },
+    {
+        "id": "d7cbe74cdfac5370",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Manhattan is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "e8425a214e52a3f9",
+                "912894c391cab8c4"
+            ]
+        ]
+    },
+    {
+        "id": "de34acf21cdb797a",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vermouth",
+        "pin": "Pump Vermouth",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d607cf14620af07a",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Bourbon",
+        "pin": "Pump Bourbon",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ea9f0e27e0332e49",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 500,
+        "wires": [
+            [
+                "de34acf21cdb797a"
+            ]
+        ]
+    },
+    {
+        "id": "7d0b79daa8df896a",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 560,
+        "wires": [
+            [
+                "d607cf14620af07a",
+                "4a5d75fc759fc93a"
+            ]
+        ]
+    },
+    {
+        "id": "e8425a214e52a3f9",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Manhattan is being Prepared",
+        "x": 400,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "912894c391cab8c4",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Manhattan is being prepared",
+        "voice": "33",
+        "x": 400,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4a5d75fc759fc93a",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "282653adf999723e",
+                "31a3873fa81ace77"
+            ]
+        ]
+    },
+    {
+        "id": "282653adf999723e",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Manhattan is ready",
+        "voice": "33",
+        "x": 710,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "31a3873fa81ace77",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Manhattan is ready",
+        "x": 770,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b1cd5338fbf1acef",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Manhattan",
+        "devicetype": "Extended color light",
+        "x": 70,
+        "y": 500,
+        "wires": [
+            [
+                "7e469e56073f07d4"
+            ]
+        ]
+    },
+    {
+        "id": "8b93260e3c489925",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Gin and French",
+        "info": "",
+        "x": 80,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "e5bf5ffc30f7bba3",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 3500,
+        "wires": [
+            [
+                "aad8b22911328744",
+                "70ee06a2a3fe2e30",
+                "a9011bf727d877cb",
+                "27dd91043c3d65c0"
+            ]
+        ]
+    },
+    {
+        "id": "1548ec9563833329",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Gin and French",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 3540,
+        "wires": [
+            [
+                "aad8b22911328744",
+                "70ee06a2a3fe2e30",
+                "a9011bf727d877cb",
+                "27dd91043c3d65c0"
+            ]
+        ]
+    },
+    {
+        "id": "27dd91043c3d65c0",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 3620,
+        "wires": [
+            [
+                "39a7f0ed7b7a3bb3",
+                "761c50c2b02ff500"
+            ]
+        ]
+    },
+    {
+        "id": "a9011bf727d877cb",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Gin and French is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 3660,
+        "wires": [
+            [
+                "f879c8aa8a6443c3",
+                "589b35f29a9fd00d"
+            ]
+        ]
+    },
+    {
+        "id": "aad8b22911328744",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vermouth",
+        "pin": "Pump Vermouth",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 3500,
+        "wires": []
+    },
+    {
+        "id": "70ee06a2a3fe2e30",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 720,
+        "y": 3560,
+        "wires": []
+    },
+    {
+        "id": "39a7f0ed7b7a3bb3",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3580,
+        "wires": [
+            [
+                "aad8b22911328744"
+            ]
+        ]
+    },
+    {
+        "id": "761c50c2b02ff500",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3640,
+        "wires": [
+            [
+                "70ee06a2a3fe2e30",
+                "9b113683ba85836b"
+            ]
+        ]
+    },
+    {
+        "id": "f879c8aa8a6443c3",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Gin and French is being Prepared",
+        "x": 420,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "589b35f29a9fd00d",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Gin and French is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "9b113683ba85836b",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 3680,
+        "wires": [
+            [
+                "6007da56929854e2",
+                "c3148581f9ee591c"
+            ]
+        ]
+    },
+    {
+        "id": "6007da56929854e2",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Gin and French is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "c3148581f9ee591c",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Gin and French is ready",
+        "x": 790,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "ae18f361dc4d8043",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Gin and French",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 3580,
+        "wires": [
+            [
+                "1548ec9563833329"
+            ]
+        ]
+    },
+    {
+        "id": "86f1dc91fa49a3de",
+        "type": "comment",
+        "z": "24686110a19dc9cb",
+        "name": "Churchill Martini",
+        "info": "",
+        "x": 80,
+        "y": 3780,
+        "wires": []
+    },
+    {
+        "id": "5a42915626aa5e91",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 3780,
+        "wires": [
+            [
+                "bd881365c3e09821",
+                "27b57480b5193357",
+                "0d66cd2ebb56de34"
+            ]
+        ]
+    },
+    {
+        "id": "aac6cd175d627bbb",
+        "type": "ui_button",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "group": "13c41e5.20e70e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Churchill Martini",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 3820,
+        "wires": [
+            [
+                "bd881365c3e09821",
+                "27b57480b5193357",
+                "0d66cd2ebb56de34"
+            ]
+        ]
+    },
+    {
+        "id": "0d66cd2ebb56de34",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 3900,
+        "wires": [
+            [
+                "662764c3bb21ca8c",
+                "18eb7c2b1e1863cb"
+            ]
+        ]
+    },
+    {
+        "id": "27b57480b5193357",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Churchill Martini is being Prepared",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 3940,
+        "wires": [
+            [
+                "a849d6c59b1b19c2",
+                "4f4666cc3d29e46f"
+            ]
+        ]
+    },
+    {
+        "id": "bd881365c3e09821",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 740,
+        "y": 3820,
+        "wires": []
+    },
+    {
+        "id": "662764c3bb21ca8c",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3860,
+        "wires": [
+            [
+                "bd881365c3e09821"
+            ]
+        ]
+    },
+    {
+        "id": "18eb7c2b1e1863cb",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "90",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 3920,
+        "wires": [
+            [
+                "7a1237da50fc3231"
+            ]
+        ]
+    },
+    {
+        "id": "a849d6c59b1b19c2",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "60",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Churchill Martini is being Prepared",
+        "x": 420,
+        "y": 3960,
+        "wires": []
+    },
+    {
+        "id": "4f4666cc3d29e46f",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Churchill Martini is being prepared",
+        "voice": "33",
+        "x": 420,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "7a1237da50fc3231",
+        "type": "change",
+        "z": "24686110a19dc9cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 3960,
+        "wires": [
+            [
+                "35848c4edcba5ba6",
+                "c1d4c17a83478938"
+            ]
+        ]
+    },
+    {
+        "id": "35848c4edcba5ba6",
+        "type": "play audio",
+        "z": "24686110a19dc9cb",
+        "name": "Churchill Martini is ready",
+        "voice": "33",
+        "x": 730,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "c1d4c17a83478938",
+        "type": "ui_toast",
+        "z": "24686110a19dc9cb",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Churchill Martini is ready",
+        "x": 790,
+        "y": 3900,
+        "wires": []
+    },
+    {
+        "id": "053640a795e48de0",
+        "type": "alexa-home",
+        "z": "24686110a19dc9cb",
+        "devicename": "Churchill Martini",
+        "devicetype": "Extended color light",
+        "x": 80,
+        "y": 3860,
+        "wires": [
+            [
+                "aac6cd175d627bbb"
+            ]
+        ]
+    },
+    {
+        "id": "e5e723bea9c8e04a",
+        "type": "remote-access",
+        "z": "24686110a19dc9cb",
+        "confignode": "dd4f7126438cc588",
+        "name": "",
+        "verbose": 0,
+        "x": 180,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db118d5603336dee",
+        "type": "alexa-home-controller",
+        "z": "24686110a19dc9cb",
+        "controllername": "Alexa Controller",
+        "port": "8980",
+        "maxItems": 25,
+        "x": 540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7d819ef546c374ee",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 730,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4a2bfef1072918d0",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 970,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ab557d11be6de020",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vermouth",
+        "pin": "Pump Vermouth",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 980,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4c8052610efe7856",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Gin",
+        "pin": "Pump Gin",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 960,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cfdcd3d04c8d3106",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Bourbon",
+        "pin": "Pump Bourbon",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 980,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "df808742263bc9ad",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Tequila",
+        "pin": "Pump Tequila",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 980,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "65b431f138d52563",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Marg Mix",
+        "pin": "Pump Marg Mix",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 980,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "527f7837b5290791",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Ginger Ale",
+        "pin": "Pump Ginger Ale",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2e3c6089b8b56b17",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Orange Juice",
+        "pin": "Pump Orange Juice",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 1000,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "942be21ea6c0603e",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Vodka",
+        "pin": "Pump Vodka",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "45de3317b72ec07d",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Orange Juice",
+        "pin": "Pump Orange Juice",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 940,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "8b3fdbfa677bf293",
+        "type": "rpi-gpio out",
+        "z": "24686110a19dc9cb",
+        "name": "Pump Orange Juice",
+        "pin": "Pump Orange Juice",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 960,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "11bd2f7acc74661d",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "Delay 30s",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45bbb79d840cb221",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "Delay 30s",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "7d819ef546c374ee"
+            ]
+        ]
+    },
+    {
+        "id": "e5566e7b6c68e56b",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "Delay 30s",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 1600,
+        "wires": [
+            [
+                "45de3317b72ec07d"
+            ]
+        ]
+    },
+    {
+        "id": "e0f3be370a4d5cc8",
+        "type": "delay",
+        "z": "24686110a19dc9cb",
+        "name": "Delay 30s",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 2720,
+        "wires": [
+            [
+                "8b3fdbfa677bf293"
+            ]
+        ]
+    },
+    {
+        "id": "13c41e5.20e70e2",
+        "type": "ui_group",
+        "name": "Pick your Poison",
+        "tab": "cd48bd1f.c5f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dd4f7126438cc588",
+        "type": "remote-config",
+        "name": "Bartender",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "mnoy6q0exiwqxr42icf723orudrk5cgofwdwtijz14lne6u9r46mfv0csr09ojli",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
+    },
+    {
+        "id": "cd48bd1f.c5f",
+        "type": "ui_tab",
+        "name": "Bartender",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
